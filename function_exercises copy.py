@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "c626669b",
+   "id": "d9863ace",
    "metadata": {},
    "source": [
     "### "
@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e6423570",
+   "id": "fed6e898",
    "metadata": {},
    "source": [
     "### Function Exercises"
@@ -18,7 +18,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "14e8e117",
+   "id": "310194cc",
    "metadata": {},
    "source": [
     "1. Define a function named is_two. It should accept one input and return True if the passed input is either the number or the string 2, False otherwise."
@@ -27,7 +27,7 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "7e593611",
+   "id": "103599e0",
    "metadata": {},
    "outputs": [
     {
@@ -53,7 +53,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "98f790c5",
+   "id": "119ddcc9",
    "metadata": {},
    "source": [
     "2. Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise."
@@ -61,8 +61,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
-   "id": "f87c2731",
+   "execution_count": 142,
+   "id": "402c5e0e",
    "metadata": {},
    "outputs": [
     {
@@ -78,7 +78,6 @@
    ],
    "source": [
     "def is_vowel(letter):\n",
-    "    letter == str\n",
     "    if letter in ('a', 'e', 'i', 'o' , 'u'):\n",
     "        return True\n",
     "    else:\n",
@@ -91,7 +90,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "329872ea",
+   "id": "8ee5a974",
    "metadata": {},
    "source": [
     "3. Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise. Use your is_vowel function to accomplish this."
@@ -99,8 +98,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
-   "id": "40457360",
+   "execution_count": 49,
+   "id": "15cc5882",
    "metadata": {},
    "outputs": [
     {
@@ -115,7 +114,6 @@
    ],
    "source": [
     "def is_consonant(letter):\n",
-    "    letter == str\n",
     "    if letter not in ('a', 'e', 'i', 'o' , 'u'):\n",
     "        return True\n",
     "    else:\n",
@@ -127,7 +125,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e497c4b9",
+   "id": "7a802f12",
    "metadata": {},
    "source": [
     "4. Define a function that accepts a string that is a word. The function should capitalize the first letter of the word if the word starts with a consonant."
@@ -135,26 +133,17 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 38,
-   "id": "3a63bcff",
+   "execution_count": 178,
+   "id": "71f3d1e7",
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "False\n"
-     ]
-    },
-    {
-     "ename": "NameError",
-     "evalue": "name 'mesmerize' is not defined",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[0;32m/var/folders/5k/zptdym41293159jft7y2b6cm0000gp/T/ipykernel_63309/2493301366.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      7\u001b[0m         \u001b[0;32mreturn\u001b[0m \u001b[0mword\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst_letter_capital\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m5\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 9\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst_letter_capital\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmesmerize\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m: name 'mesmerize' is not defined"
+      "False\n",
+      "Bool\n",
+      "Mesmerize\n"
      ]
     }
    ],
@@ -162,53 +151,17 @@
     "def first_letter_capitalization(word):\n",
     "    if type(word) != str:\n",
     "        return False\n",
-    "    first_letter = string[0]\n",
-    "    if first_letter_capitalization(word)[0] not in ('a', 'e', 'i', 'o' , 'u'):\n",
-    "        word = word.capitalize()\n",
-    "        return word\n",
-    "print(first_letter_capital(5))\n",
-    "print(first_letter_capital(mesmerize))"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 40,
-   "id": "b98d1ab3",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "False\n"
-     ]
-    },
-    {
-     "ename": "NameError",
-     "evalue": "name 'mesmerize' is not defined",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[0;32m/var/folders/5k/zptdym41293159jft7y2b6cm0000gp/T/ipykernel_63309/3785458737.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      6\u001b[0m         \u001b[0;32mreturn\u001b[0m \u001b[0mword\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst_letter_capital\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m5\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfirst_letter_capital\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmesmerize\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m: name 'mesmerize' is not defined"
-     ]
-    }
-   ],
-   "source": [
-    "def first_letter_capital(word):\n",
-    "    if type(word) != str:\n",
-    "        return False\n",
-    "    if word[0] not in ('a', 'e', 'i', 'o' , 'u'):\n",
-    "        word.capitalize([0])\n",
-    "        return word\n",
-    "print(first_letter_capital(5))\n",
-    "print(first_letter_capital(mesmerize))"
+    "    first_letter = word[0]\n",
+    "    if first_letter not in ('a', 'e', 'i', 'o' , 'u'):\n",
+    "        return word.capitalize()\n",
+    "print(first_letter_capitalization(10))\n",
+    "print(first_letter_capitalization('bool'))\n",
+    "print(first_letter_capitalization('mesmerize'))"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "9ee60313",
+   "id": "678f3b1c",
    "metadata": {},
    "source": [
     "5. Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip."
@@ -216,8 +169,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 54,
-   "id": "03961232",
+   "execution_count": 179,
+   "id": "aef6f517",
    "metadata": {},
    "outputs": [
     {
@@ -226,15 +179,14 @@
      "text": [
       "3.0\n",
       "4.5\n",
-      "None\n",
-      "22.5\n"
+      "False\n",
+      "False\n"
      ]
     }
    ],
    "source": [
     "def calculate_tip(x, y):\n",
-    "    0 > x >= 1\n",
-    "    if x <0 and x > 1:\n",
+    "    if x <0 or x > 1:\n",
     "        return False\n",
     "    if (type(x) == float) and (type(y) == int):\n",
     "        calculate_tip = y * x\n",
@@ -247,7 +199,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "b77e2166",
+   "id": "6bc785b2",
    "metadata": {},
    "source": [
     "6. Define a function named apply_discount. It should accept an original price, and a discount percentage, and return the price after the discount is applied."
@@ -256,7 +208,7 @@
   {
    "cell_type": "code",
    "execution_count": 72,
-   "id": "7303ad0b",
+   "id": "eb657d8f",
    "metadata": {},
    "outputs": [
     {
@@ -281,7 +233,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e11e4a43",
+   "id": "5cb88d53",
    "metadata": {},
    "source": [
     "7. Define a function named handle_commas. It should accept a string that is a number that contains commas in it as input, and return a number as output."
@@ -290,7 +242,7 @@
   {
    "cell_type": "code",
    "execution_count": 85,
-   "id": "2de0adb9",
+   "id": "c2f0f265",
    "metadata": {},
    "outputs": [
     {
@@ -315,7 +267,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0efe280c",
+   "id": "e77e0440",
    "metadata": {},
    "source": [
     "8. Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F)."
@@ -323,15 +275,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 102,
-   "id": "bbb80163",
-   "metadata": {},
+   "execution_count": 10,
+   "id": "dd794b74",
+   "metadata": {
+    "scrolled": true
+   },
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Your grade is: F\n"
+      "Your grade is: F\n",
+      "Your grade is: A\n"
      ]
     }
    ],
@@ -352,12 +307,13 @@
     "            return ('Your grade is: F')\n",
     "        else:\n",
     "            return False\n",
-    "print(get_letter_grade(5))"
+    "print(get_letter_grade(50))\n",
+    "print(get_letter_grade(95.5))"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "3b64ad41",
+   "id": "8470ed76",
    "metadata": {},
    "source": [
     "9. Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed."
@@ -365,66 +321,65 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 126,
-   "id": "1fe6181b",
+   "execution_count": 59,
+   "id": "bbd9595f",
    "metadata": {},
    "outputs": [
     {
      "ename": "NameError",
-     "evalue": "name 'banana' is not defined",
+     "evalue": "name 'new_word' is not defined",
      "output_type": "error",
      "traceback": [
       "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
       "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[0;32m/var/folders/5k/zptdym41293159jft7y2b6cm0000gp/T/ipykernel_63309/2963991460.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      7\u001b[0m             \u001b[0moutput\u001b[0m \u001b[0;34m-=\u001b[0m \u001b[0mletter\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0moutput\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 9\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mremove_vowels\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mbanana\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m: name 'banana' is not defined"
+      "\u001b[0;32m/var/folders/5k/zptdym41293159jft7y2b6cm0000gp/T/ipykernel_10373/1950578242.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      7\u001b[0m             \u001b[0mnew_word\u001b[0m \u001b[0;34m+=\u001b[0m \u001b[0mletter\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      8\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mnew_word\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 9\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mnew_word\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'6'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m: name 'new_word' is not defined"
      ]
     }
    ],
    "source": [
     "def remove_vowels(word):\n",
-    "    if word != str:\n",
+    "    if type(word) != str:\n",
     "        return False\n",
-    "    output = ''\n",
+    "    new_word = ''\n",
     "    for letter in word:\n",
-    "        if letter in ('a', 'e', 'i', 'o' , 'u'):\n",
-    "            output -= letter\n",
-    "    return output\n",
-    "print(remove_vowels(banana))"
+    "        if letter not in ['a', 'e', 'i', 'o' , 'u']:\n",
+    "            new_word += letter\n",
+    "    return new_word\n",
+    "print(new_word('banana'))"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 127,
-   "id": "97a96077",
+   "execution_count": 60,
+   "id": "a986d913",
    "metadata": {},
    "outputs": [
     {
-     "ename": "NameError",
-     "evalue": "name 'banana' is not defined",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[0;32m/var/folders/5k/zptdym41293159jft7y2b6cm0000gp/T/ipykernel_63309/166904644.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[1;32m      6\u001b[0m             \u001b[0mword\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mword\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mreplace\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mi\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\" \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m     \u001b[0;32mreturn\u001b[0m \u001b[0mword\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mremove_vowels\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mbanana\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m: name 'banana' is not defined"
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "bnn\n",
+      "None\n"
      ]
     }
    ],
    "source": [
-    "def remove_vowels(word):\n",
-    "    word == str\n",
-    "    vowels == ('a', 'e', 'i', 'o', 'u')\n",
-    "    for i in word:\n",
-    "        if i in vowels :\n",
-    "            word = word.replace(i,\" \")\n",
-    "    return word\n",
-    "print(remove_vowels(banana))"
+    "def remove_vowel(a):\n",
+    "    vowels = ['a', 'e', 'i', 'o' , 'u']\n",
+    "    s = ''\n",
+    "    if type(a) == str:\n",
+    "        for i in a.lower():\n",
+    "            if i not in vowels:\n",
+    "                s = s + i\n",
+    "        return s\n",
+    "print(remove_vowel('banana'))\n",
+    "print(remove_vowel(5000))"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "68fede1c",
+   "id": "9fd4751a",
    "metadata": {},
    "source": [
     "10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:\n",
@@ -441,7 +396,7 @@
   {
    "cell_type": "code",
    "execution_count": 128,
-   "id": "bb983f8d",
+   "id": "b93b51dd",
    "metadata": {},
    "outputs": [
     {
@@ -467,7 +422,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6a1b24fa",
+   "id": "b01b560f",
    "metadata": {},
    "source": [
     "11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.\n",
@@ -478,7 +433,7 @@
   {
    "cell_type": "code",
    "execution_count": 141,
-   "id": "5d59bc90",
+   "id": "0c20e534",
    "metadata": {},
    "outputs": [
     {
